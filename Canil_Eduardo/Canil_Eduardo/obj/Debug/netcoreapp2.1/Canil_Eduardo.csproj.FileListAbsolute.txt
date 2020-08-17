@@ -26,3 +26,17 @@ C:\Users\Erick\source\repos\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\
 C:\Users\Erick\source\repos\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.RazorTargetAssemblyInfo.cache
 C:\Users\Erick\source\repos\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.dll
 C:\Users\Erick\source\repos\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.pdb
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\bin\Debug\netcoreapp2.1\Canil_Eduardo.deps.json
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\bin\Debug\netcoreapp2.1\Canil_Eduardo.runtimeconfig.json
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\bin\Debug\netcoreapp2.1\Canil_Eduardo.runtimeconfig.dev.json
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\bin\Debug\netcoreapp2.1\Canil_Eduardo.dll
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\bin\Debug\netcoreapp2.1\Canil_Eduardo.pdb
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.csprojAssemblyReference.cache
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.csproj.CoreCompileInputs.cache
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.RazorAssemblyInfo.cache
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.RazorAssemblyInfo.cs
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.AssemblyInfoInputs.cache
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.AssemblyInfo.cs
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.RazorTargetAssemblyInfo.cache
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.dll
+C:\Users\Erick\source\repos\Canil2\Canil_Eduardo\Canil_Eduardo\obj\Debug\netcoreapp2.1\Canil_Eduardo.pdb

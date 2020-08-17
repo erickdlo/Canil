@@ -5,11 +5,11 @@ namespace Canil_Eduardo.Services
 {
     public class CanilNegocio
     {
-        public MelhorCanil BuscarMelhorCanil(string data, int caesP, int caesG)
+        public MelhorPetShop BuscarMelhorPetShop(string data, int caesP, int caesG)
         {
-            int dataNumero = ValidarData(data);
-            ValidarValorCaes(caesP, caesG);
-            MelhorCanil melhorCanil;
+            ValidarEntradaDados(data,caesP, caesG);
+            int dataNumero = ValidarData(data);            
+            MelhorPetShop melhorCanil;
 
             if (dataNumero == 6 || dataNumero == 0)
             {
@@ -22,18 +22,26 @@ namespace Canil_Eduardo.Services
             return melhorCanil;
 
         }
-
-        private void ValidarValorCaes(int caesP, int caesG)
+        private void ValidarEntradaDados(string data, int caesP, int caesG)
         {
-            if (caesP < 0)
+            if (String.IsNullOrEmpty(data))
+            {
+                throw new Exception("Valor de Data incorreto");
+            }
+            else if (caesP < 0)
             {
                 throw new Exception("Valor incorreto de caes pequenos");
-            }else if (caesG < 0)
+            }
+            else if (caesG < 0)
             {
                 throw new Exception("Valor incorreto de caes grandes");
+            }else if (caesG == 0 && caesP == 0)
+            {
+                throw new Exception("Valor incorreto de caes grandes e caes pequenos");
             }
 
         }
+        
         private int ValidarData(string data)
         {
             try
@@ -48,7 +56,7 @@ namespace Canil_Eduardo.Services
                 throw new Exception("Formato de Data Incorreto");
             }
         }
-        private MelhorCanil CalcularFinalDeSemana(int caesP, int caesG)
+        private MelhorPetShop CalcularFinalDeSemana(int caesP, int caesG)
         {
             double meuCaninoFeliz;
             double vaiRex;
@@ -62,7 +70,7 @@ namespace Canil_Eduardo.Services
             {
                 nome = "Chow Chawgas";
                 valor = chowChawgas;
-                MelhorCanil retorno = new MelhorCanil
+                MelhorPetShop retorno = new MelhorPetShop
                 {
                     NomeCanil = nome,
                     PrecoTotal = valor
@@ -73,7 +81,7 @@ namespace Canil_Eduardo.Services
             {
                 nome = "Vai Rex";
                 valor = vaiRex;
-                MelhorCanil retorno = new MelhorCanil
+                MelhorPetShop retorno = new MelhorPetShop
                 {
                     NomeCanil = nome,
                     PrecoTotal = valor
@@ -84,7 +92,7 @@ namespace Canil_Eduardo.Services
             {
                 nome = "Meu Canino Feliz";
                 valor = meuCaninoFeliz;
-                MelhorCanil retorno = new MelhorCanil
+                MelhorPetShop retorno = new MelhorPetShop
                 {
                     NomeCanil = nome,
                     PrecoTotal = valor
@@ -93,7 +101,7 @@ namespace Canil_Eduardo.Services
             }
         }
 
-        private MelhorCanil CalcularDiaDeSemana(int caesP, int caesG)
+        private MelhorPetShop CalcularDiaDeSemana(int caesP, int caesG)
         {
             double meuCaninoFeliz;
             double vaiRex;
@@ -107,7 +115,7 @@ namespace Canil_Eduardo.Services
             {
                 nome = "Chow Chawgas";
                 valor = chowChawgas;
-                MelhorCanil retorno = new MelhorCanil
+                MelhorPetShop retorno = new MelhorPetShop
                 {
                     NomeCanil = nome,
                     PrecoTotal = valor
@@ -118,7 +126,7 @@ namespace Canil_Eduardo.Services
             {
                 nome = "Vai Rex";
                 valor = vaiRex;
-                MelhorCanil retorno = new MelhorCanil
+                MelhorPetShop retorno = new MelhorPetShop
                 {
                     NomeCanil = nome,
                     PrecoTotal = valor
@@ -129,7 +137,7 @@ namespace Canil_Eduardo.Services
             {
                 nome = "Meu Canino Feliz";
                 valor = meuCaninoFeliz;
-                MelhorCanil retorno = new MelhorCanil
+                MelhorPetShop retorno = new MelhorPetShop
                 {
                     NomeCanil = nome,
                     PrecoTotal = valor

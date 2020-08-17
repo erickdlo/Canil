@@ -10,13 +10,13 @@ namespace Canil_Eduardo.Controllers
     public class CanilController : ControllerBase
     {
         [HttpGet]
-        [Route("melhor-canil")]
-        public ActionResult ObterMelhorCanil([FromQuery] string data, [FromQuery] int caesP, [FromQuery] int caesG)
+        [Route("melhor-petshop")]
+        public ActionResult ObterMelhorPetShop([FromQuery] string data, [FromQuery] int caesP, [FromQuery] int caesG)
         {
             CanilNegocio negCanil = new CanilNegocio();
             try
             {   
-                MelhorCanil retorno = negCanil.BuscarMelhorCanil(data, caesP, caesG);
+                MelhorPetShop retorno = negCanil.BuscarMelhorPetShop(data, caesP, caesG);
                 return Ok(retorno);
             }
             catch (Exception ex)

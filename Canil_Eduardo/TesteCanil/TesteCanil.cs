@@ -9,58 +9,76 @@ namespace UnitTestProject1
     public class TesteCanil
     {
         [TestMethod]
-        public void Teste_Sucesso_MelhorCanil_MeuCaninoFeliz_DiaDeSemana()
+        public void Teste_Sucesso_MelhorPetShop_MeuCaninoFeliz_DiaDeSemana()
         {
             string data = "17/08/2020";
             CanilNegocio negCanil = new CanilNegocio();
-            MelhorCanil retorno = negCanil.BuscarMelhorCanil(data, 1, 1);
+            MelhorPetShop retorno = negCanil.BuscarMelhorPetShop(data, 1, 1);
             Assert.AreEqual(retorno.NomeCanil, "Meu Canino Feliz");
             Assert.AreEqual(retorno.PrecoTotal, 60);
         }
         [TestMethod]
-        public void Teste_Sucesso_MelhorCanil_MeuCaninoFeliz_FinalDeSemana()
+        public void Teste_Sucesso_MelhorPetShop_MeuCaninoFeliz_FinalDeSemana()
         {
             string data = "16/08/2020";
             CanilNegocio negCanil = new CanilNegocio();
-            MelhorCanil retorno = negCanil.BuscarMelhorCanil(data, 1, 1);
+            MelhorPetShop retorno = negCanil.BuscarMelhorPetShop(data, 1, 1);
             Assert.AreEqual(retorno.NomeCanil, "Meu Canino Feliz");
             Assert.AreEqual(retorno.PrecoTotal, 72);
         }
         [TestMethod]
-        public void Teste_Sucesso_MelhorCanil_VaiRex_DiaDeSemana()
+        public void Teste_Sucesso_MelhorPetShop_VaiRex_DiaDeSemana()
         {
             string data = "17/08/2020";
             CanilNegocio negCanil = new CanilNegocio();
-            MelhorCanil retorno = negCanil.BuscarMelhorCanil(data, 1, 1);
-            Assert.AreEqual(retorno.NomeCanil, "Meu Canino Feliz");
-            Assert.AreEqual(retorno.PrecoTotal, 60);
+            MelhorPetShop retorno = negCanil.BuscarMelhorPetShop(data, 3, 1);
+            Assert.AreEqual(retorno.NomeCanil, "Vai Rex");
+            Assert.AreEqual(retorno.PrecoTotal, 95);
         }
         [TestMethod]
-        public void Teste_Sucesso_MelhorCanil_VaiRex_FinalDeSemana()
+        public void Teste_Sucesso_MelhorPetShop_VaiRex_FinalDeSemana()
         {
-            string data = "17/08/2020";
+            string data = "16/08/2020";
             CanilNegocio negCanil = new CanilNegocio();
-            MelhorCanil retorno = negCanil.BuscarMelhorCanil(data, 1, 1);
-            Assert.AreEqual(retorno.NomeCanil, "Meu Canino Feliz");
-            Assert.AreEqual(retorno.PrecoTotal, 60);
+            MelhorPetShop retorno = negCanil.BuscarMelhorPetShop(data, 3, 1);
+            Assert.AreEqual(retorno.NomeCanil, "Vai Rex");
+            Assert.AreEqual(retorno.PrecoTotal, 115);
         }
         [TestMethod]
-        public void Teste_Sucesso_MelhorCanil_ChowChawgas()
+        public void Teste_Sucesso_MelhorPetShop_ChowChawgas_FinalDeSemana()
         {
-            string data = "17/08/2020";
+            string data = "16/08/2020";
             CanilNegocio negCanil = new CanilNegocio();
-            MelhorCanil retorno = negCanil.BuscarMelhorCanil(data, 1, 1);
-            Assert.AreEqual(retorno.NomeCanil, "Meu Canino Feliz");
-            Assert.AreEqual(retorno.PrecoTotal, 60);
+            MelhorPetShop retorno = negCanil.BuscarMelhorPetShop(data, 1, 4);
+            Assert.AreEqual(retorno.NomeCanil, "Chow Chawgas");
+            Assert.AreEqual(retorno.PrecoTotal, 210);
         }
         [TestMethod]
-        [ExpectedException(typeof(Exception))]
+        public void Teste_Sucesso_MelhorPetShop_ChowChawgas_Empate_MeuCaninoFeliz_FinalDeSemana()
+        {
+            string data = "16/08/2020";
+            CanilNegocio negCanil = new CanilNegocio();
+            MelhorPetShop retorno = negCanil.BuscarMelhorPetShop(data, 1, 2);
+            Assert.AreEqual(retorno.NomeCanil, "Chow Chawgas");
+            Assert.AreEqual(retorno.PrecoTotal, 120);
+        }
+        
+        [TestMethod]
         public void Teste_Falha_QuantidadeCaesP()
         {
-            string data = "17/08/2020";
-            CanilNegocio negCanil = new CanilNegocio();
-            negCanil.BuscarMelhorCanil(data, -2, 1);
-            
+            Exception excecao = null;
+            try
+            {
+                string data = "17/08/2020";
+                CanilNegocio negCanil = new CanilNegocio();
+                negCanil.BuscarMelhorPetShop(data, -11, 2);
+            }
+            catch (Exception ex)
+            {
+                excecao = ex;
+            }
+            Assert.IsNotNull(excecao);
+            Assert.AreEqual(excecao.Message, "Valor incorreto de caes pequenos");
         }
         [TestMethod]
         public void Teste_Falha_QuantidadeCaesG()
@@ -70,7 +88,7 @@ namespace UnitTestProject1
             {
                 string data = "17/08/2020";
                 CanilNegocio negCanil = new CanilNegocio();
-                negCanil.BuscarMelhorCanil(data, 1, -22);
+                negCanil.BuscarMelhorPetShop(data, 1, -22);
             }
             catch (Exception ex)
             {
@@ -78,9 +96,40 @@ namespace UnitTestProject1
             }            
             Assert.IsNotNull(excecao);
             Assert.AreEqual(excecao.Message, "Valor incorreto de caes grandes");
-
-
-
+        }
+        [TestMethod]
+        public void Teste_Falha_QuantidadeCaesP_e_QuantidadeCaesG_IgualZero()
+        {
+            Exception excecao = null;
+            try
+            {
+                string data = "17/08/2020";
+                CanilNegocio negCanil = new CanilNegocio();
+                negCanil.BuscarMelhorPetShop(data, 0, 0);
+            }
+            catch (Exception ex)
+            {
+                excecao = ex;
+            }
+            Assert.IsNotNull(excecao);
+            Assert.AreEqual(excecao.Message, "Valor incorreto de caes grandes e caes pequenos");
+        }
+        [TestMethod]
+        public void Teste_Falha_Data_Vazia()
+        {
+            Exception excecao = null;
+            try
+            {
+                string data = "";
+                CanilNegocio negCanil = new CanilNegocio();
+                negCanil.BuscarMelhorPetShop(data, 1, 1);
+            }
+            catch (Exception ex)
+            {
+                excecao = ex;
+            }
+            Assert.IsNotNull(excecao);
+            Assert.AreEqual(excecao.Message, "Valor de Data incorreto");
         }
     }
 }

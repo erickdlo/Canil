@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Erick\\source\\repos\\Canil_Eduardo\\Canil_Eduardo\\Canil_Eduardo.csproj",
+      "projectUniqueName": "C:\\Users\\Erick\\source\\repos\\Canil2\\Canil_Eduardo\\Canil_Eduardo\\Canil_Eduardo.csproj",
       "projectName": "Canil_Eduardo",
-      "projectPath": "C:\\Users\\Erick\\source\\repos\\Canil_Eduardo\\Canil_Eduardo\\Canil_Eduardo.csproj",
+      "projectPath": "C:\\Users\\Erick\\source\\repos\\Canil2\\Canil_Eduardo\\Canil_Eduardo\\Canil_Eduardo.csproj",
       "packagesPath": "C:\\Users\\Erick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Erick\\source\\repos\\Canil_Eduardo\\Canil_Eduardo\\obj\\",
+      "outputPath": "C:\\Users\\Erick\\source\\repos\\Canil2\\Canil_Eduardo\\Canil_Eduardo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
